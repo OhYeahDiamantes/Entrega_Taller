@@ -3,13 +3,58 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+   background-color: rgb(237, 223, 225); 
+}
 .titulo{
     font-size: 35px;
-    color: red;
+    color: pink;
+    text-shadow: 1px 1px 2px #853737;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 
 }
 .formulario{
     border: 2px solid black;
+    background-image: url(../IMAGES/aaaa.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5rem;
+    padding: 2rem;
+
+}
+.subtitulo{
+    color: #853737;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+.content{
+    color: #853737;
+    border: 2px solid;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.boton{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: pink;
+    padding: .5rem;
+
+    font-size: 20px;
+
+    color: #853737;
+    font-weight: bold;
+    border: 2px solid #835159;
     
+}
+.boton:hover{
+    background-color: white;
 }
