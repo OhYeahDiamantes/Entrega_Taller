@@ -4,14 +4,16 @@
     box-sizing: border-box;
 }
 body{
-   background-color: rgb(237, 223, 225); 
+   background-color: #eddfe1; 
 }
 .titulo{
     font-size: 35px;
-    color: pink;
-    text-shadow: 1px 1px 2px #853737;
+    color: #dd97a3;
+    text-shadow: 1px 1px 2px #853737,
+    1px -2px 0 #853737, 1px -3px 0 #ffff;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-family: 'Cursive', cursive;
 
 }
 .formulario{
@@ -19,7 +21,6 @@ body{
     background-image: url(../IMAGES/aaaa.gif);
     background-repeat: no-repeat;
     background-size: cover;
-
 
     display: flex;
     flex-direction: column;
@@ -29,22 +30,26 @@ body{
     gap: 1.5rem;
     padding: 2rem;
 
+    font-family: Rockwell;
+    font-weight: bold;
 }
 .subtitulo{
     color: #853737;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
+    font-family: Rockwell;
 }
 .content{
     color: #853737;
     border: 2px solid;
     text-align: center;
     font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Rockwell;
+    font-weight: bold;
 }
 .boton{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Cooper black;
     background-color: pink;
     padding: .5rem;
 
