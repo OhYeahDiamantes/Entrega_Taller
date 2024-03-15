@@ -14,22 +14,18 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-family: 'Cursive', cursive;
-
 }
 .formulario{
     border: 2px solid black;
     background-image: url(../IMAGES/aaaa.gif);
     background-repeat: no-repeat;
     background-size: cover;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 1.5rem;
     padding: 2rem;
-
     font-family: Rockwell;
     font-weight: bold;
 }
