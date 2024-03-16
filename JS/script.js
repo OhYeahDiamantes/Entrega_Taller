@@ -1,32 +1,3 @@
-//Ola m llaman Romeo
-function mostrarNumeros() {
-    const select = document.getElementById("opcion");
-    const option = select.value;
-    const lim = parseInt(document.getElementById("lim").value);
-    const resultado = document.getElementById("resultado");
-
-    let numeros = [];
-    let posiciones = [];
-
-    for (let i = 1; i <= lim; i++) {
-        
-    }
-    if (option === "Par" && i % 2 === 0) {
-        numeros.push(i);
-        posiciones.push(numeros.length);
-    } else if (option === "Impar" && i % 2 !== 0) {
-        numeros.push(i);
-        posiciones.push(numeros.length);
-    } else if (option === "Par Mayor" && i > lim && i % 2 === 0) {
-        numeros.push(i);
-        posiciones.push(numeros.length);
-    } else if (option === "Impar Mayor" && i > lim && i % 2 !== 0) {
-        numeros.push(i);
-        posiciones.push(numeros.length);
-    }
-
-}
-
 // evento change; explicado por el profesor 
 // document.getElementById("opciones").addEventListener("change", function(event) {
 //    console.log(event.target.value);
@@ -76,6 +47,29 @@ for (let i = 0; i <= 200; i++) {
     arreglo.push(i);
 }
 console.log(arreglo)
+
+
+// ---- NUMEROS PARES IMPARES, PARES MAYORES Y PARES MENORES 
+
+// NUMERO PAR SI AL DIVIDIRLO POR 2 SU RESIDUO ES 0
+// NUMERO IMPAR ES AQUEL QUE AL DIVIDIRLO POR 2 SU RESIDUO NO ES 0 
+
+// - - - - - funcion - -- 
+
+function compararPares(lista){
+    return lista.filter(numero => numero % 2 === 0);
+}
+function compararImpares(numero){
+    return numero.filter(numero => numero % 2 !== 0);
+}
+
+let numerosPares = compararPares(arreglo);
+let numerosImpares = compararImpares(arreglo);
+
+console.log("PARES: ", numerosPares);
+
+console.log("IMPARES: ", numerosImpares);
+
 
 // - - - mostrar lista - - - 
 let lista = document.getElementById("list");
