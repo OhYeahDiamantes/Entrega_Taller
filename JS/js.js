@@ -8,6 +8,11 @@ function mostrarNumeros() {
     let numeros = [];
     let posiciones = [];
 
+    // for debe ejecutar al inicio para el array 
+
+
+
+
     for (let i = 1; i <= lim; i++) {
         if (option === "Par" && i % 2 === 0) {
             numeros.push(i);
@@ -25,10 +30,10 @@ function mostrarNumeros() {
     }
 
     // Se supone que esto muestra los resultados en el form, pero no sabría pq solo se puede un for w a a a
-    resultado.innerHTML = "";
-    for (let i = 0; i < numeros.length; i++) {
-       resultado.innerHTML += `<li>${numeros[i]} - posición ${posiciones[i]}</li>`;
-    }
+    // resultado.innerHTML = "";
+    // for (let i = 0; i < numeros.length; i++) {
+    //    resultado.innerHTML += `<li>${numeros[i]} - posición ${posiciones[i]}</li>`;
+    // }
 }
 
 //Joda del botón enviar waos
