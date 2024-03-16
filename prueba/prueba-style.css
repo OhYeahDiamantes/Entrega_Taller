@@ -1,0 +1,8 @@
+.section-content{
+    display: none;
+    background-color: aqua;
+}
+.section-content-final{
+    display: block;
+    background-color: red;
+}
