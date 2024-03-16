@@ -10,7 +10,7 @@
     <h2 class="titulo">Proyecto Formulario</h2>
 
     <form class="formulario" action="">
-        <label class="subtitulo" for="">Seleccione una opción</label>
+        <label class="subtitulo" for="opciones">Seleccione una opción</label>
         
         <select class="content" id="opciones">
             <option value="1">Par</option>
@@ -21,17 +21,17 @@
 
         <section id="seccionOculta" class="section-content">
             <label class="subtitulo">Ingrese el número:</label>
-            <input class="content number" type="number">
+            <input placeholder="Ejm: 2 o 3" class="content number" type="number">
         </section>
 
-        <button class="boton" type="submit">Enviar</button>
+        <button id="btn" class="boton" type="button">Enviar</button>
 
-        <section class="content">
+        <section class="content section-content" id="result">
             <ul class="list" id="list"> 
                 <!-- lista de numeros  -->
             </ul>
         </section>
-
+       
     </form>
     <script src="./JS/script.js"></script>    
 </body>

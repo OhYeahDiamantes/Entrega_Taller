@@ -8,8 +8,6 @@ function mostrarNumeros() {
     let numeros = [];
     let posiciones = [];
 
-    // for debe ejecutar al inicio para el array 
-
     for (let i = 1; i <= lim; i++) {
         
     }
@@ -27,24 +25,7 @@ function mostrarNumeros() {
         posiciones.push(numeros.length);
     }
 
-    // Se supone que esto muestra los resultados en el form, pero no sabría pq solo se puede un for w a a a
-    // resultado.innerHTML = "";
-    // for (let i = 0; i < numeros.length; i++) {
-    //    resultado.innerHTML += `<li>${numeros[i]} - posición ${posiciones[i]}</li>`;
-    // }
 }
-
-//Joda del botón enviar waos
-// document.getElementById("boton").addEventListener("click", function(event) {
-//     event.preventDefault(); // Cancela todo
-//     mostrarNumeros(); // Muestra los números omg
-// });
-
-
-// opciones.addEventListener("change", function(event){
-//     resultado.textContent = 'Opcion escogida ${event.target.value};'
-// })
-
 
 // evento change; explicado por el profesor 
 // document.getElementById("opciones").addEventListener("change", function(event) {
@@ -59,18 +40,30 @@ const opcion = document.getElementById("opciones");
 // obtiene los valores del id del documento que se llame seccionOculta y lo guarda en una variable.
 const seccion = document.getElementById("seccionOculta")
 
-// - - - le agrega a opcion el evento - - -
+// - - - le agrega la opcion el evento - - -
 opcion.addEventListener('change',function(){
     // variableOption se llena con los valores de opcion 
     let valueOption = opcion.value;
 
     // compara si el valor el mayor a 3 
     if (valueOption>=3) {
+        // renombra la clase 
         seccion.className = "section-content-final";
     }else{
         seccion.className = "section-content";
     }
 });
+
+// - - - Oculta la lista hasta que se ejecute la operacion - - - 
+
+// obtenemos el valor de btn por si id 
+const btn = document.getElementById("btn");
+const result = document.getElementById("result");
+
+// // cuando haga click quita la clase con el display none
+btn.addEventListener("click", ()=>{
+    result.classList.remove("section-content");
+} );
 
 // - - - - Lista de numeros - - - -
 let arreglo = [];
@@ -103,6 +96,10 @@ console.log("impresion prueba"+arreglo);
 // convertimos el arreglo en una cadena de texto e incrustamos el lista el codigo html
 // las comillas son para sobrescribir la coma que viene por defecto
 lista.innerHTML = arreglo.join("");
+
+
+
+
 
 
 
