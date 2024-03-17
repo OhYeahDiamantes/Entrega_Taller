@@ -48,11 +48,7 @@ for (let i = 0; i <= 200; i++) {
 }
 console.log(arreglo)
 
-
 // ---- NUMEROS PARES IMPARES, PARES MAYORES Y PARES MENORES 
-
-// NUMERO PAR SI AL DIVIDIRLO POR 2 SU RESIDUO ES 0
-// NUMERO IMPAR ES AQUEL QUE AL DIVIDIRLO POR 2 SU RESIDUO NO ES 0 
 
 //Poison en Italiano m dio poderes dea
 
@@ -85,8 +81,47 @@ btn.addEventListener("click", () => {
     }
 });
 
+//Hello again friend of a friend-
+
 // <---- Sección par e impar mayor ---->
 
+function compararParesMayores(lista, numeroIngresado){
+    let numerosParesMayores = lista.filter(numero => numero > numeroIngresado && numero % 2 === 0);
+    let listaParesMayores = document.getElementById("listParesMayores");
+    listaParesMayores.innerHTML = numerosParesMayores.map(numero => `<li>|${numero}|</li>`).join("");
+}
+
+function compararImparesMayores(lista, numeroIngresado){
+    let numerosImparesMayores = lista.filter(numero => numero > numeroIngresado && numero % 2 !== 0);
+    let listaImparesMayores = document.getElementById("listImparesMayores");
+    listaImparesMayores.innerHTML = numerosImparesMayores.map(numero => `<li>|${numero}|</li>`).join("");
+}
+
+btn.addEventListener("click", () => {
+    const opcion = document.getElementById("opciones").value;
+    const numeroIngresado = parseInt(document.querySelector('.number').value);
+
+    // Ocultar todas las secciones al principio
+    document.getElementById("listPares").style.display = "none";
+    document.getElementById("listImpares").style.display = "none";
+    document.getElementById("listParesMayores").style.display = "none";
+    document.getElementById("listImparesMayores").style.display = "none";
+    
+    // Mostrar la sección correspondiente según la opción seleccionada y el número ingresado
+    if (opcion === "1") {
+        compararPares(arreglo);
+        document.getElementById("listPares").style.display = "block";
+    } else if (opcion === "2") {
+        compararImpares(arreglo);
+        document.getElementById("listImpares").style.display = "block";
+    } else if (opcion === "3") {
+        compararParesMayores(arreglo, numeroIngresado);
+        document.getElementById("listParesMayores").style.display = "block";
+    } else if (opcion === "4") {
+        compararImparesMayores(arreglo, numeroIngresado);
+        document.getElementById("listImparesMayores").style.display = "block";
+    }
+});
 
 
 
