@@ -54,42 +54,40 @@ console.log(arreglo)
 // NUMERO PAR SI AL DIVIDIRLO POR 2 SU RESIDUO ES 0
 // NUMERO IMPAR ES AQUEL QUE AL DIVIDIRLO POR 2 SU RESIDUO NO ES 0 
 
-// - - - - - funcion - -- 
+//Poison en Italiano m dio poderes dea
 
 function compararPares(lista){
-    return lista.filter(numero => numero % 2 === 0);
-}
-function compararImpares(numero){
-    return numero.filter(numero => numero % 2 !== 0);
-}
-
-let numerosPares = compararPares(arreglo);
-let numerosImpares = compararImpares(arreglo);
-
-console.log("PARES: ", numerosPares);
-
-console.log("IMPARES: ", numerosImpares);
-
-
-// - - - mostrar lista - - - 
-let lista = document.getElementById("list");
-
-console.log("lista: "+lista);
-
-/* map : crea un arreglo identico, la funcion divide cada elemento y le agrega una etiqueta li, se concatena y finalmente sobreescribor el arreglo*/
-arreglo = arreglo.map(etiquetado);
-
-function etiquetado(numero){
-    return "<li>|"+numero+"|</li>";
+    let numerosPares = lista.filter(numero => numero % 2 === 0);
+    let listaPares = document.getElementById("listPares");
+    listaPares.innerHTML = numerosPares.map(numero => `<li>|${numero}|</li>`).join("");
 }
 
-console.log("impresion prueba"+arreglo);
+function compararImpares(lista){
+    let numerosImpares = lista.filter(numero => numero % 2 !== 0);
+    let listaImpares = document.getElementById("listImpares");
+    listaImpares.innerHTML = numerosImpares.map(numero => `<li>|${numero}|</li>`).join("");
+}
 
-// mostrando el arreglo en el codigo html
+btn.addEventListener("click", () => {
+    const opcion = document.getElementById("opciones").value;
+    
+    // Ocultar ambas secciones al principio
+    document.getElementById("listPares").style.display = "none";
+    document.getElementById("listImpares").style.display = "none";
+    
+    // Mostrar la sección correspondiente según la opción seleccionada
+    if (opcion === "1" || opcion === "3") {
+        compararPares(arreglo);
+        document.getElementById("listPares").style.display = "block";
+    } else if (opcion === "2" || opcion === "4") {
+        compararImpares(arreglo);
+        document.getElementById("listImpares").style.display = "block";
+    }
+});
 
-// convertimos el arreglo en una cadena de texto e incrustamos el lista el codigo html
-// las comillas son para sobrescribir la coma que viene por defecto
-lista.innerHTML = arreglo.join("");
+// <---- Sección par e impar mayor ---->
+
+
 
 
 
